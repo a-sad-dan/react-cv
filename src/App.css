@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#root {
+	height: 100vh;
+	height: 100svh;
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: center;
+	margin-left: 1rem;
+}
+
+.sidebar button {
+	padding: 0.8em;
+	border-radius: 1em;
+}
+
+.form-div,
+#resume {
+	flex-grow: 1;
+}
+
+.form-div {
+	background-color: bisque;
+}
+#resume {
+	box-shadow: 4px 4px 10px 1px rgba(0,0,0,0.5);
+	scrollbar-width: none;
+	margin-top: 1rem;
+}

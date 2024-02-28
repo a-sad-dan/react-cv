@@ -1,0 +1,132 @@
+:root {
+	--theme-text: #b7525e;
+	--dark-text: #403e50;
+}
+
+#resume {
+	color: var(--dark-text);
+	padding: 5rem 1.8rem;
+	overflow: scroll;
+	max-width: 850px;
+	margin-right: 1rem;
+	max-height: 1100;
+}
+
+#resume .row {
+	display: flex;
+}
+.row > div {
+	flex: 1;
+}
+
+.col_container {
+	display: flex;
+	gap: 1rem;
+}
+
+div.column:nth-child(1) {
+	flex: 2;
+}
+
+div.column:nth-child(2) {
+	flex: 3;
+	padding-left: 1rem;
+}
+
+#resume .section {
+	display: flex;
+	padding: 1rem 0;
+}
+
+.section__name {
+	text-transform: uppercase;
+	text-orientation: upright;
+	writing-mode: sideways-lr;
+	text-align: center;
+	font-size: 1.25em;
+	font-weight: bold;
+	margin-right: 1.8rem;
+	line-height: 1em;
+	position: relative;
+}
+
+.section__name::after {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 2px;
+	background-color: var(--dark-text);
+	margin-left: 1rem;
+}
+.section__name::before {
+	content: '';
+	display: block;
+	height: 0.6rem;
+	width: 0.6rem;
+	border-radius: 100%;
+	background-color: var(--dark-text);
+	margin-left: 1rem;
+	position: relative;
+	top: -50%;
+	right: -2.1em;
+}
+
+.personal-info {
+	padding-left: 4rem;
+	padding-bottom: 2rem;
+}
+
+.personal-info .name {
+	font-size: 3.2813rem;
+	font-weight: 900;
+	line-height: 105%;
+	letter-spacing: 1rem;
+	letter-spacing: 2px;
+	margin: 0;
+}
+
+.job-position {
+	font-weight: bold;
+	font-size: 1.125rem;
+	margin: 0;
+}
+
+.contact_info {
+	display: flex;
+}
+
+.language-container {
+	margin: 0.65em 0;
+}
+
+.theme-text {
+	color: var(--theme-text);
+}
+
+.small {
+	font-size: 0.85rem;
+}
+
+.normal {
+	font-weight: 420;
+}
+
+.medium {
+	font-size: 1.05rem;
+}
+
+.semi-bold {
+	font-weight: 600;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.capitalise {
+	text-transform: capitalize;
+}
