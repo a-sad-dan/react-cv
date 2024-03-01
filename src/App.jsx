@@ -20,6 +20,8 @@ import { useState } from 'react';
 import './form.css';
 
 function App() {
+	const [resumeData, setResumeData] = useState(dummyData);
+
 	const handleDownloadPDF = () => {
 		const node = document.getElementById('resume');
 
@@ -27,7 +29,7 @@ function App() {
 			.toPng(node, { quality: 1.0 })
 			.then(function (dataUrl) {
 				const link = document.createElement('a');
-				link.download = 'resume.png';
+				link.download = `${resumeData.firstName}-${resumeData.lastName}-resume.png`;
 				link.href = dataUrl;
 				link.click();
 			})
@@ -41,7 +43,6 @@ function App() {
 			});
 	};
 
-	const [resumeData, setResumeData] = useState(dummyData);
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
@@ -120,15 +121,17 @@ function App() {
 							>
 								Reset All
 							</button>
-							<input
-								type='color'
-								onInput={(e) => {
-									document.documentElement.style.setProperty(
-										'--theme-text',
-										e.target.value
-									);
-								}}
-							/>
+							<div className='color-holder'>
+								<input
+									type='color'
+									onInput={(e) => {
+										document.documentElement.style.setProperty(
+											'--theme-text',
+											e.target.value
+										);
+									}}
+								/>
+							</div>
 						</div>
 					</section>
 					<section
