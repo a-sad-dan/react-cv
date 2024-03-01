@@ -79,7 +79,8 @@ function App() {
 								<input
 									type='text'
 									name='firstName'
-									placeholder={resumeData.firstName}
+									placeholder='First Name'
+									value={resumeData.firstName}
 									onChange={(e) => {
 										setResumeData({
 											...resumeData,
@@ -94,7 +95,8 @@ function App() {
 								<input
 									type='text'
 									name='lastName'
-									placeholder={resumeData.lastName}
+									placeholder='Last Name'
+									value={resumeData.lastName}
 									onChange={(e) => {
 										setResumeData({ ...resumeData, lastName: e.target.value });
 									}}
@@ -107,7 +109,8 @@ function App() {
 								<input
 									type='text'
 									name='position'
-									placeholder={resumeData.position}
+									placeholder='Job Position'
+									value={resumeData.position}
 									onChange={(e) => {
 										setResumeData({
 											...resumeData,
@@ -122,7 +125,8 @@ function App() {
 								Address
 								<input
 									type='text'
-									placeholder={resumeData.contact.address}
+									placeholder='Address'
+									value={resumeData.contact.address}
 									name='address'
 									onInput={(e) => {
 										const newContact = resumeData.contact;
@@ -137,7 +141,8 @@ function App() {
 								Email
 								<input
 									type='text'
-									placeholder={resumeData.contact.email}
+									placeholder='Email'
+									value={resumeData.contact.email}
 									onInput={(e) => {
 										const newContact = resumeData.contact;
 										newContact.email = e.target.value;
@@ -150,7 +155,8 @@ function App() {
 								<input
 									name='phone'
 									type='text'
-									placeholder={resumeData.contact.phone}
+									placeholder='Phone'
+									value={resumeData.contact.phone}
 									onInput={(e) => {
 										const newContact = resumeData.contact;
 										newContact.phone = e.target.value;
@@ -171,7 +177,8 @@ function App() {
 											<input
 												type='text'
 												name='link'
-												placeholder={link}
+												placeholder='Link'
+												value={link}
 												onInput={(e) => {
 													let linksArr = resumeData.links;
 													linksArr[index] = e.target.value;
@@ -209,7 +216,9 @@ function App() {
 							<label>
 								About Me
 								<textarea
-									rows='3'
+									rows='6'
+									placeholder='Hi, I am ...'
+									value={resumeData.about}
 									onInput={(e) => {
 										setResumeData({
 											...resumeData,
@@ -219,6 +228,64 @@ function App() {
 								></textarea>
 							</label>
 						</div>
+					</section>
+
+					<section
+						id='languages'
+						className='form-section'
+					>
+						<p className='section-label x-large bold'>Languages</p>
+						{resumeData.sections[0].languages.map((lang, index) => (
+							<div
+								className='link-inputs'
+								key={index}
+							>
+								<div className='form-row'>
+									<input
+										type='text'
+										placeholder='Language'
+										value={lang.name}
+										name='language'
+										onChange={(e) => {
+											const newSection = resumeData.sections;
+											newSection[0].languages[index].name = e.target.value;
+											setResumeData({ ...resumeData, sections: newSection });
+										}}
+									/>
+									<input
+										type='text'
+										placeholder='Proficiency Level'
+										name='language'
+										value={lang.proficiency}
+										onChange={(e) => {
+											const newSection = resumeData.sections;
+											newSection[0].languages[index].proficiency =
+												e.target.value;
+											setResumeData({ ...resumeData, sections: newSection });
+										}}
+									/>
+									<button
+										onClick={() => {
+											let sectionArr = resumeData.sections;
+											sectionArr[0].languages.splice(index, 1);
+											setResumeData({ ...resumeData, sections: sectionArr });
+										}}
+									>
+										⊘
+									</button>
+								</div>
+							</div>
+						))}
+						<button
+							className='action-button x-small'
+							onClick={() => {
+								let sectionArr = resumeData.sections;
+								sectionArr[0].languages.push({ name: '', proficiency: '' });
+								setResumeData({ ...resumeData, sections: sectionArr });
+							}}
+						>
+							Add Language +
+						</button>
 					</section>
 				</form>
 			</div>
