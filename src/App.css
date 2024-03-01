@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	line-height: 1.25em;
+	box-sizing: border-box;
 }
 
 #root {
@@ -10,7 +11,8 @@
 	width: 100%;
 	display: flex;
 	gap: 1rem;
-	justify-content: space-between;
+	justify-content: space-around;
+	overflow: clip;
 }
 
 .sidebar {
@@ -29,11 +31,12 @@
 .form-div,
 #resume {
 	flex-grow: 1;
+	overflow: scroll;
+	scrollbar-width: none;
 }
 
 .form-div {
 	/* background-color: bisque; */
-	margin-top: 1rem;
 	max-width: 750px;
 }
 #resume__container {

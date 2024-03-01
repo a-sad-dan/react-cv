@@ -9,6 +9,7 @@
 	padding: 4rem 0.25em;
 	max-width: 950px;
 	padding-bottom: 3rem;
+	min-width: 600px;
 }
 
 #resume .row {

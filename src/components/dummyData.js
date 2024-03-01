@@ -77,21 +77,18 @@ const dummyData = {
 			education: [
 				{
 					place: 'Jamia Millia Islamia',
-					address: 'new delhi',
 					start: '2023',
 					end: 'current',
 					degree: 'M.Tech. In Electronics',
 				},
 				{
 					place: 'jamia millia islamia',
-					address: 'new delhi',
 					start: '2020',
 					end: '2024',
 					degree: 'B.Tech. in Electronics and Communication',
 				},
 				{
 					place: 'cambridge school, srinivaspuri',
-					address: 'new Delhi',
 					start: '2018',
 					end: '2020',
 					degree: 'high school',
