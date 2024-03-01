@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	line-height: 1.25em;
 }
 
 #root {
@@ -31,10 +32,17 @@
 }
 
 .form-div {
-	background-color: bisque;
+	/* background-color: bisque; */
+	margin-top: 1rem;
+	max-width: 750px;
 }
-#resume {
-	box-shadow: 4px 4px 10px 1px rgba(0,0,0,0.5);
+#resume__container {
+	box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.5);
 	scrollbar-width: none;
 	margin-top: 1rem;
+	overflow: scroll;
+	margin-right: 1rem;
+	max-height: 100vh;
+	max-height: 100svh;
+	height: min-content;
 }

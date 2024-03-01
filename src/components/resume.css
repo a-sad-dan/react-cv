@@ -4,17 +4,27 @@
 }
 
 #resume {
+	background-color: white;
 	color: var(--dark-text);
-	padding: 5rem 1.8rem;
-	overflow: scroll;
-	max-width: 850px;
-	margin-right: 1rem;
-	max-height: 1100;
+	padding: 4rem 0.25em;
+	max-width: 950px;
+	padding-bottom: 3rem;
 }
 
 #resume .row {
 	display: flex;
 }
+.inner.row {
+	gap: 0.5em;
+}
+
+.inner.row > div:nth-child(1) {
+	flex: 2;
+}
+.inner.row > div:nth-child(2) {
+	flex: 3;
+}
+
 .row > div {
 	flex: 1;
 }
@@ -23,14 +33,20 @@
 	display: flex;
 	gap: 1rem;
 }
+div.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 
 div.column:nth-child(1) {
 	flex: 2;
+	padding-left: 1.45rem;
 }
 
 div.column:nth-child(2) {
 	flex: 3;
-	padding-left: 1rem;
+	padding-right: 2rem;
 }
 
 #resume .section {
@@ -42,12 +58,14 @@ div.column:nth-child(2) {
 	text-transform: uppercase;
 	text-orientation: upright;
 	writing-mode: sideways-lr;
+	/* writing-mode: vertical-lr; */
 	text-align: center;
 	font-size: 1.25em;
 	font-weight: bold;
-	margin-right: 1.8rem;
-	line-height: 1em;
+	margin-right: 1.45rem;
+	line-height: 1em;	
 	position: relative;
+	margin-left: -1em;
 }
 
 .section__name::after {
@@ -69,6 +87,34 @@ div.column:nth-child(2) {
 	position: relative;
 	top: -50%;
 	right: -2.1em;
+}
+.special-section__name {
+	position: relative;
+	/* text-align: center; */
+	padding-bottom: 0.5rem;
+}
+
+.special-section__name::before {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 100%;
+	background-color: var(--theme-text);
+	margin-bottom: 0.65rem;
+}
+
+.special-section__name::after {
+	content: '';
+	display: block;
+	height: 0.6rem;
+	width: 0.6rem;
+	border-radius: 100%;
+	background-color: var(--theme-text);
+	margin-bottom: 1rem;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	translate: -50% -50%;
 }
 
 .personal-info {
@@ -93,26 +139,43 @@ div.column:nth-child(2) {
 
 .contact_info {
 	display: flex;
+	padding-right: 4rem;
+	gap: 1.5rem;
 }
 
 .language-container {
 	margin: 0.65em 0;
+}
+.data-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
 }
 
 .theme-text {
 	color: var(--theme-text);
 }
 
-.small {
+.x-small {
 	font-size: 0.85rem;
 }
-
+.small {
+	font-size: 0.95rem;
+}
 .normal {
 	font-weight: 420;
 }
 
 .medium {
 	font-size: 1.05rem;
+}
+.large {
+	font-size: 1.15rem;
+}
+
+.x-large
+{
+	font-size: 1.25rem;
 }
 
 .semi-bold {

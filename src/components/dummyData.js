@@ -8,13 +8,10 @@ const dummyData = {
 		phone: '9289575925',
 	},
 	links: ['a-sad-dan.online', 'github.com/a-sad-dan'],
+	about:
+		"Hey, I'm Danish, a 21-year-old Electronics and Communication student with a love for adventure, tech, and great coffee. When not hitting the books, I'm either coding, exploring hiking trails, or enjoying a latte at the local café with a good read. Music, sports, and sustainability also fuel my passions. I'm always ready for new challenges, aiming to make each moment count and leave a positive mark wherever I go. Cheers to the journey ahead! 🌟",
 
 	sections: [
-		{
-			name: 'about me',
-			about:
-				"Hey, I'm Danish, a 21-year-old guy with a passion for adventure, tech, and a good cup of coffee. Currently studying Electronics and Communication at university, you'll often find me exploring hiking trails, diving into coding projects, or savoring a latte at the local coffee shop with a book in hand. Music, sports, and sustainability are also big parts of my life. Always up for a new challenge, I'm on a mission to make the most of every moment and create a positive impact wherever I go. Cheers to the journey ahead! 🌟",
-		},
 		{
 			name: 'languages',
 			languages: [
@@ -42,6 +39,10 @@ const dummyData = {
 					name: 'C',
 					proficiency: 'beginner',
 				},
+				{
+					name: 'MATLAB',
+					proficiency: 'beginner',
+				},
 			],
 		},
 		{
@@ -49,6 +50,8 @@ const dummyData = {
 			skills: [
 				'git',
 				'github',
+				'pug',
+				'webpack',
 				'bash scripting',
 				'jest',
 				'react',
@@ -63,7 +66,6 @@ const dummyData = {
 			interests: [
 				'reading',
 				'running',
-				'gaming',
 				'football',
 				'3d graphics',
 				'painting',
@@ -74,7 +76,7 @@ const dummyData = {
 			name: 'education',
 			education: [
 				{
-					place: 'IIT Delhi',
+					place: 'Jamia Millia Islamia',
 					address: 'new delhi',
 					start: '2023',
 					end: 'current',
@@ -100,12 +102,12 @@ const dummyData = {
 			name: 'experience',
 			experience: [
 				{
-					company: 'Digital Solutions Agency',
+					company: 'Digital Solutions',
 					position: 'Front-end Developer',
 					start: 'June 2021',
 					end: 'Present',
 					about:
-						'Designed and developed responsive web apps, collaborating with UI/UX and back-end teams. Used HTML5, CSS3, JavaScript, and React.js. Emphasized web accessibility, optimized performance, and contributed to code reviews.',
+						'Developed responsive web apps with HTML5, CSS3, JavaScript, and React.js. Emphasized web accessibility, optimized performance, and collaborated with UI/UX and back-end teams.',
 				},
 				{
 					company: 'Tech Innovations Co.',
@@ -113,7 +115,7 @@ const dummyData = {
 					start: 'September 2020',
 					end: 'May 2021',
 					about:
-						'Contributed to React.js and Redux web app development. Translated designs to code, optimized performance, and conducted code reviews for improvement.',
+						'Contributed to React.js and Redux web app development by translating designs to code, optimizing performance, and conducting code reviews for improvement.',
 				},
 				{
 					company: 'Web Solutions Co.',
@@ -121,7 +123,7 @@ const dummyData = {
 					start: 'May 2020',
 					end: 'August 2020',
 					about:
-						'Assisted in developing websites with HTML5, CSS3, and JavaScript. Collaborated on UI enhancements, conducted browser testing, and gained experience with Bootstrap.',
+						'Assisted in website development using HTML5, CSS3, and JavaScript. Collaborated on UI enhancements, conducted browser testing, and gained experience with Bootstrap.',
 				},
 			],
 		},
@@ -133,21 +135,21 @@ const dummyData = {
 					year: '2023',
 					place: 'Tech Expo',
 					about:
-						'Designed and developed an innovative website for a client project, incorporating modern UI/UX principles and responsive design. The project received recognition at the annual Tech Expo for its creativity, functionality, and user engagement.',
+						'Developed an award-winning website for a client project, featuring modern UI/UX and responsive design. Recognized at the annual Tech Expo for creativity, functionality, and user engagement.',
 				},
 				{
 					achievement: 'Article Publishing',
 					year: '2022',
 					place: 'Web Development Journal',
 					about:
-						'Authored an article focused on best practices for optimizing front-end performance in web applications. The article, published in a renowned Web Development Journal, provided insights into reducing load times, improving user experience, and implementing efficient coding techniques.',
+						'Published an article in a prestigious Web Development Journal, focusing on optimizing front-end performance. Provided insights on reducing load times, enhancing user experience, and efficient coding techniques.',
 				},
 				{
 					achievement: ' Front-end Development Scholarship',
 					year: '2021',
 					place: 'Tech Institute',
 					about:
-						'Awarded a prestigious scholarship for demonstrating exceptional skills and dedication in front-end development. The scholarship recognized achievements in creating accessible, user-friendly interfaces and contributions to the tech community through open-source projects.',
+						'Received a prestigious scholarship for outstanding skills in front-end development. Recognized for creating accessible interfaces, contributions to open-source projects, and dedication to the tech community.',
 				},
 			],
 		},
