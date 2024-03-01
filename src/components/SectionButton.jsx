@@ -7,5 +7,4 @@ const SectionButton = ({ icon, onPress }) => {
 		</>
 	);
 };
-
 export default SectionButton;
